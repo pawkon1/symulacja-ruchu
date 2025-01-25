@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruch jednostajnie przyspieszony</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Symulacja ruchu jednostajnie przyspieszonego</h1>
+    <form id="inputForm">
+        <div class="form-group">
+            <label for="initialVelocity">Prędkość początkowa (m/s):</label>
+            <input type="number" id="initialVelocity" step="0.1" required min="0">
+        </div>
+        <div class="form-group">
+            <label for="acceleration">Przyspieszenie (m/s²):</label>
+            <input type="number" id="acceleration" step="0.1" required min="0">
+        </div>
+        <div class="form-group">
+            <label for="time">Czas trwania (s):</label>
+            <input type="number" id="time" step="1" required min="1" max="10">
+        </div>
+        <button type="button" id="startButton">Start</button>
+    </form>
+    <canvas id="animationCanvas"></canvas>
+    <div id="results">
+        <h2>Wyniki</h2>
+        <p id="distance"></p>
+        <p id="finalVelocity"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
